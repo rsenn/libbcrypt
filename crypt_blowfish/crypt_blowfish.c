@@ -53,7 +53,7 @@
 /* Just to make sure the prototypes match the actual definitions */
 #include "crypt_blowfish.h"
 
-#if defined(__i386__) && !defined(_WIN32)
+#if defined(__i386__) && !defined(_WIN32) && !defined(BF_NO_ASM)
 #define BF_ASM				1
 #define BF_SCALE			1
 #elif defined(__x86_64__) || defined(__alpha__) || defined(__hppa__)
